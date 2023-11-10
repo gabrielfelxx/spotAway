@@ -45,15 +45,18 @@
     align-items: center;
     justify-content: center;
     margin-top: 36px;
+    overflow: hidden;
+    white-space: nowrap;
 
     &.scroll-left {
-      overflow: hidden;
-      white-space: nowrap;
-
       .cardContainer {
         display: flex;
         animation: scroll-left-animation 20s linear infinite;
-        
+        animation-play-state: running;
+      }
+
+      &:hover .cardContainer {
+        animation-play-state: paused;
       }
     }
   }

@@ -4,6 +4,12 @@
   align-items: flex-start;
   background-color: var(--white);
   height: 500px;
+  transition: all 0.4s;
+
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
 
   .imageCardDiv {
     .imageCard {
@@ -15,18 +21,21 @@
   .infoDiv {
     margin-left: 36px;
     margin-top: 24px;
+
     .placeInfo {
       font-size: 20px;
       font-weight: 300;
       color: var(--dark-blue);
       text-transform: uppercase;
     }
+
     .subtitleInfo {
       font-size: 14px;
       font-weight: 200;
       color: var(--dark-blue);
       text-transform: uppercase;
     }
+
     .priceInfo {
       margin-top: 36px;
       color: var(--blue);
