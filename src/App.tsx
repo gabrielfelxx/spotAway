@@ -1,10 +1,10 @@
 import "./styles/App.scss";
-import Main from "./pages/main";
+import Home from "./pages/HomePage";
 
 function App() {
   return (
     <>
-      <Main />
+      <Home />
     </>
   );
 }
