@@ -17,10 +17,8 @@ const LoginModal: React.FC = () => {
   const handleSubmit = async () => {
     try {
       await schema.validate({ email, password }, { abortEarly: false });
-      // Se a validação for bem-sucedida, faça a chamada à API com Axios
       const response = await axios.post("SUA_URL_API_AQUI", { email, password });
       console.log("API Response: ", response.data);
-      // Reset dos campos e limpeza de erros
       setEmail("");
       setPassword("");
       setError("");
