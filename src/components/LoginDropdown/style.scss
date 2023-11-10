@@ -1,17 +1,20 @@
 /* src/components/LoginDropdown.scss */
 .container {
   position: relative;
-
 }
 
 .login-dropdown {
+  margin-top: 20px;
+  right: 70%;
   position: absolute;
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 200px;
   padding: 15px;
-  border: 1px solid #ccc;
+  background-color: var(--white);
+  border: none;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   border-radius: 5px;
 
   input {
@@ -21,6 +24,7 @@
     outline: none;
     border: none;
     border-radius: 10px;
+    background-color: #ececec;
   }
 
   button {
@@ -38,9 +42,25 @@
       background-color: rgba(0, 0, 0, 0.1);
     }
   }
+  .noHaveAccount {
+    margin-top: 6px;
+    font-size: 14px;
+    color: var(--orange);
+    text-decoration: none;
+    transition: all 0.2s;
+
+    &:hover {
+      color: rgba(0, 0, 0, 0.6);
+    }
+  }
 
   .error {
     color: red;
     margin-top: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .login-dropdown {
+    right: 30%;
   }
 }

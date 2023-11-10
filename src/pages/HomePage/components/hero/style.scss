@@ -8,8 +8,10 @@
 
 .containerHero {
   height: 700px;
-  img {
+  min-width: 600px;
+  img.heroImage {
     width: 100%;
+    max-width: 100%;
     position: relative;
     margin-top: -12%;
     filter: brightness(0.9);
@@ -19,6 +21,8 @@
     left: 60%;
     top: 40%;
     position: absolute;
+    background-color: transparent;
+    padding: 0;
 
     .heroTitle {
       font-weight: 600;
@@ -47,6 +51,43 @@
       &:hover {
         background-color: rgba(0, 0, 0, 0.1);
       }
+    }
+  }
+}
+@media only screen and (max-width: 700px) {
+  .containerHero {
+    .textDiv {
+      .heroTitle {
+        font-size: 32px;
+      }
+      .heroButton {
+        margin-top: 3rem;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 600px) {
+  .containerHero {
+    .textDiv {
+      top: 30%;
+      left: 58%;
+      background-color: rgba(0, 0, 0, 0.1);
+      padding: 20px;
+      .heroTitle {
+        font-size: 28px;
+      }
+      .heroSubtitle {
+        font-size: 16px;
+      }
+    }
+  }
+}
+@media only screen and (max-width:480px) {
+  .containerHero {
+    .textDiv{
+      left: 20%;
+      width: 60%;
+      background-color: rgba(0, 0, 10, 0.4);
     }
   }
 }
