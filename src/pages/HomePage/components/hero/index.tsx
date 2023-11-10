@@ -4,7 +4,7 @@ import "./style.scss";
 export default function Hero() {
   return (
     <div className="containerHero">
-      <img src="../../hero-bg.svg" alt="test" />
+      <img src="../../hero-bg.svg" alt="test" className="heroImage"/>
 
       <div className="textDiv">
         <h2 className="heroTitle">

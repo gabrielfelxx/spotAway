@@ -52,6 +52,7 @@ const LoginDropdown: React.FC<LoginDropdownProps> = ({ onClose }) => {
           onChange={(e) => setPassword(e.target.value)}
         />
         <button onClick={handleSubmit}>Entrar</button>
+        <a href="" className="noHaveAccount">Don't have an account?</a>
         {error && <div className="error">{error}</div>}
       </div>
     </div>
