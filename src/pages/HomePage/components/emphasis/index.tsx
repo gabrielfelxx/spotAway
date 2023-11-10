@@ -4,19 +4,22 @@ import Card from "../cards/index";
 
 export default function Emphasis() {
   const cards = [
-    { id: 1,
+    {
+      id: 1,
       img: '../../public/card1.png',
       place: "São Miguel",
       subtitle: "São miguel aos olhos dos moradores",
       price: "R$ 18.000,000"
     },
-    { id: 2,
+    {
+      id: 2,
       img: '../../public/card2.png',
       place: "Uruburetama",
       subtitle: "Uruburetama aos olhos dos urubus",
       price: "R$ 85.000,000"
     },
-    { id: 3,
+    {
+      id: 3,
       img: '../../public/card3.png',
       place: "Frade",
       subtitle: "Frade aos olhos dos cegos",
