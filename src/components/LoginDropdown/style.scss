@@ -1,0 +1,46 @@
+/* src/components/LoginDropdown.scss */
+.container {
+  position: relative;
+
+}
+
+.login-dropdown {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 200px;
+  padding: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+
+  input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    outline: none;
+    border: none;
+    border-radius: 10px;
+  }
+
+  button {
+    border-radius: 20px;
+    padding: 8px 30px;
+    color: var(--white);
+    background-color: var(--orange);
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.1);
+    }
+  }
+
+  .error {
+    color: red;
+    margin-top: 10px;
+  }
+}
