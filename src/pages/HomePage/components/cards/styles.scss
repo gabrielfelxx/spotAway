@@ -1,13 +1,66 @@
 .cardContainer {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    background-color: var(--white);
-    height: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  background-color: var(--white);
+  height: 500px;
+  transition: all 0.4s;
 
-    .imageCardDiv {
-        .imageCard {
-            width: 320px;
-        }
+  &:hover {
+    opacity: 0.8;
+    cursor: pointer;
+  }
+
+  .imageCardDiv {
+    .imageCard {
+      width: 380px;
+      height: 220px;
     }
+  }
+
+  .infoDiv {
+    margin-left: 36px;
+    margin-top: 24px;
+
+    .placeInfo {
+      font-size: 20px;
+      font-weight: 300;
+      color: var(--dark-blue);
+      text-transform: uppercase;
+    }
+
+    .subtitleInfo {
+      font-size: 14px;
+      font-weight: 200;
+      color: var(--dark-blue);
+      text-transform: uppercase;
+    }
+
+    .priceInfo {
+      margin-top: 36px;
+      color: var(--blue);
+    }
+  }
+
+  .subInfoDiv {
+    display: flex;
+    flex-direction: row;
+    margin-left: 36px;
+    margin-top: 48px;
+    gap: 20px;
+
+    .info {
+      display: flex;
+      flex-direction: column;
+
+      .topText {
+        color: var(--dark-blue);
+      }
+
+      .bottomText {
+        color: var(--dark-blue);
+        font-weight: 200;
+      }
+    }
+  }
 }
