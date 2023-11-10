@@ -1,6 +1,7 @@
 // components/SideBar.tsx
 import React from "react";
 import { X } from "lucide-react";
+import './style.scss'
 
 interface SidebarProps {
   setSidebarIsActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -16,9 +17,8 @@ const Sidebar: React.FC<SidebarProps> = ({ setSidebarIsActive, sidebarIsActive }
           <X />
         </button>
       </div>
-      <div className="sidebar-content">
-        {/* Adicione os itens do menu aqui */}
-        <ul>
+      <div className="sidebarContent">
+        <ul className="itensSideBar">
           <li>Home</li>
           <li>Emphasis</li>
           <li>Category</li>
