@@ -1,10 +1,14 @@
-// src/components/LoginModal.tsx
+// src/components/LoginDropdown.tsx
 import React, { useState } from "react";
 import * as Yup from "yup";
 import axios from "axios";
-import "./LoginModal.scss";
+import "./style.scss";
 
-const LoginModal: React.FC = () => {
+interface LoginDropdownProps {
+  onClose: () => void;
+}
+
+const LoginDropdown: React.FC<LoginDropdownProps> = ({ onClose }) => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [error, setError] = useState("");
@@ -22,6 +26,7 @@ const LoginModal: React.FC = () => {
       setEmail("");
       setPassword("");
       setError("");
+      onClose(); // Fechar o dropdown após o login bem-sucedido
     } catch (error) {
       if (error instanceof Yup.ValidationError) {
         setError("Por favor, verifique os campos.");
@@ -32,24 +37,25 @@ const LoginModal: React.FC = () => {
   };
 
   return (
-    <div className="login-modal">
-      <h2>Login</h2>
-      <input
-        type="text"
-        placeholder="E-mail"
-        value={email}
-        onChange={(e) => setEmail(e.target.value)}
-      />
-      <input
-        type="password"
-        placeholder="Senha"
-        value={password}
-        onChange={(e) => setPassword(e.target.value)}
-      />
-      <button onClick={handleSubmit}>Entrar</button>
-      {error && <div className="error">{error}</div>}
+    <div className='container'>
+      <div className="login-dropdown">
+        <input
+          type="text"
+          placeholder="E-mail"
+          value={email}
+          onChange={(e) => setEmail(e.target.value)}
+        />
+        <input
+          type="password"
+          placeholder="Senha"
+          value={password}
+          onChange={(e) => setPassword(e.target.value)}
+        />
+        <button onClick={handleSubmit}>Entrar</button>
+        {error && <div className="error">{error}</div>}
+      </div>
     </div>
   );
 };
 
-export default LoginModal;
+export default LoginDropdown;
