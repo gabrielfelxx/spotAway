@@ -1,0 +1,45 @@
+.empContainer {
+  height: 840px;
+  background-color: var(--bg-color);
+
+  .empBlock {
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    .empText {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 28px;
+
+      .empTitle {
+        font-weight: 300;
+        font-size: 36px;
+      }
+
+      .empSubtitle {
+        font-weight: 300;
+        color: var(--dark-blue);
+      }
+    }
+
+    .arrowDiv {
+      display: flex;
+      align-items: center;
+      .arrow {
+        transition: all 0.2s;
+        &:hover {
+            padding: 1px;
+        }
+      }
+    }
+  }
+  .cards {
+    display: flex;
+    gap: 4rem;
+    align-items: center;
+    justify-content: center;
+    margin-top: 36px;
+  }
+}
