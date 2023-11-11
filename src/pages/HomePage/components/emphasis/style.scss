@@ -1,5 +1,5 @@
 .empContainer {
-  height: 840px;
+  height: 920px;
   background-color: var(--bg-color);
 
   .empBlock {
@@ -30,10 +30,10 @@
       align-items: center;
 
       .arrow {
-        transition: all 0.2s;
+        transition: all 0.5s;
 
         &:hover {
-          padding: 1px;
+          transform: rotate(360deg) scale(1.2);
         }
       }
     }
