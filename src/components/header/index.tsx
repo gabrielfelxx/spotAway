@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import LoginDropdown from "../LoginDropdown";
 import Sidebar from "./components/SideBar";
 import { AlignJustify } from "lucide-react";
+import { Link } from "react-router-dom";
 import "./style.scss";
 
 const Header: React.FC = () => {
@@ -19,15 +20,15 @@ const Header: React.FC = () => {
     <div>
       <nav className="header">
         <div className="logo">
-          <h2>SpotAway</h2>
+          <Link to="/"><h2>SpotAway</h2></Link>
         </div>
 
         <div className="containerItemsHeader">
           <div className="headerList">
             <ul>
-              <li>Home</li>
+            <li><Link to="/">Home</Link></li>
               <li>Emphasis</li>
-              <li>Category</li>
+              <li><Link to="/places">Explore</Link></li>
             </ul>
           </div>
 
