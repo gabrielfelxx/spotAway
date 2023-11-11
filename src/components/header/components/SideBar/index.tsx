@@ -2,6 +2,7 @@
 import React from "react";
 import { X } from "lucide-react";
 import './style.scss'
+import { Link } from "react-router-dom";
 
 interface SidebarProps {
   setSidebarIsActive: React.Dispatch<React.SetStateAction<boolean>>;
@@ -19,9 +20,9 @@ const Sidebar: React.FC<SidebarProps> = ({ setSidebarIsActive, sidebarIsActive }
       </div>
       <div className="sidebarContent">
         <ul className="itensSideBar">
-          <li>Home</li>
+        <li><Link to="/">Home</Link></li>
           <li>Emphasis</li>
-          <li>Category</li>
+          <li><Link to="/places">Explore</Link></li>
         </ul>
       </div>
     </div>

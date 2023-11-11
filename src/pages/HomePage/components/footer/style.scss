@@ -1,0 +1,42 @@
+.footerContainer {
+  background-color: var(--orange);
+  width: 100%;
+  height: 180px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  
+  .textsDiv {
+    width: 40%;
+    margin: 5rem;
+    color: var(--white);
+    h4 {
+      font-weight: 300;
+      font-size: 18px;
+    }
+    h2 {
+      font-weight: 600;
+      font-size: 30px;
+    }
+  }
+  .icons {
+    width: 40%;
+    margin-left: 5rem;
+    .groupFooter {
+      display: flex;
+      align-items: center;
+      span {
+        margin-left: 5px;
+        font-size: 14px;
+        font-weight: 300;
+        color: var(--white);
+      }
+    }
+    .icon {
+      width: 16px;
+      filter: brightness(0) invert(1);
+    }
+  }
+}
