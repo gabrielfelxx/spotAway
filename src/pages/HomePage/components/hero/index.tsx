@@ -1,10 +1,10 @@
 import "./style.scss";
-
+import { Link } from "react-router-dom";
 
 export default function Hero() {
   return (
     <div className="containerHero">
-      <img src="../../hero-bg.svg" alt="test" className="heroImage"/>
+      <img src="../../hero-bg.svg" alt="test" className="heroImage" />
 
       <div className="textDiv">
         <h2 className="heroTitle">
@@ -16,7 +16,9 @@ export default function Hero() {
           reserve the coziest places
           <br /> for your weekend.
         </h4>
-        <button className="heroButton">Start booking</button>
+        <Link to="./places">
+          <button className="heroButton">Start booking</button>
+        </Link>
       </div>
     </div>
   );

@@ -1,6 +1,7 @@
 import "./style.scss";
 import ArrowCircleRightIcon from "@mui/icons-material/ArrowCircleRight";
 import Card from "../cards/index";
+import { Link } from "react-router-dom";
 
 export default function Emphasis() {
   const cards = [
@@ -74,15 +75,11 @@ export default function Emphasis() {
           <h4 className="empSubtitle">To enjoy, experience and dream</h4>
         </div>
         <div className="arrowDiv">
-          <ArrowCircleRightIcon className="arrow" />
+          <Link to="/places">
+            <ArrowCircleRightIcon className="arrow" />
+          </Link>
         </div>
       </div>
-
-      {/* <div className="cards">
-        {cards.map((card) => (
-          <Card key={card.id} {...card} />
-        ))}
-      </div> */}
 
       <div className="cards scroll-left">
         {cards.map((card) => (
